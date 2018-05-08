@@ -33,9 +33,10 @@
 (setq default-process-coding-system '(utf-8 . utf-8))
 (setq-default pathname-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
-
 (setq-default indent-tabs-mode nil)
-(setq default-tab-width 2)
+(setq default-tab-width 4)
+(setq c-default-style "linux")
+(setq c-basic-offset 4)
 
 ;; (require 'auto-complete)
 
@@ -46,7 +47,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company auto-complete ggtags))))
+ '(package-selected-packages (quote (helm sr-speedbar company auto-complete ggtags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -62,3 +63,20 @@
 
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+
+(require 'auto-complete)
+(ac-config-default)
+
+
+(require 'helm)
+(require 'sr-speedbar)
+(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+(setq speedbar-show-unknown-files t)
+(setq speedbar-use-images nil)
+(setq sr-speedbar-width 30)
+(setq sr-speedbar-right-side nil)
+
+(setq
+ gdb-many-windows t
+ gdb-show-main t
+ )
