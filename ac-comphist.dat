@@ -1,48 +1,50 @@
-((("include" .
-   [0 0 0 0 1 1 0])
-  ("sizeof" .
-   [0 0 0 1 0 0])
-  ("require" .
-   [2 0 0 0 0 0 0])
-  ("sr-speedbar" .
-   [0 0 0 0 0 0 0 0 0 0 2])
-  ("global-" .
-   [0 0 0 0 0 0 1])
-  ("global-set-key" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("kbd" .
-   [1 0 0])
-  ("sr-speedbar-toggle" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [13 0 0 0])
-  ("speedbar" .
-   [0 0 0 0 0 0 0 1])
-  ("speedbar-show-unknown-files" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("speedbar-use-images" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("nil" .
-   [3 0 0])
-  ("sr-speedbar-open" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0])
-  ("helm" .
-   [0 0 0 1])
-  ("c-basic-offset" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("sr-speedbar-auto-refresh" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
-  ("sr-speedbar-refresh-turn-on" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("speedbar-shown-directories" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("speedbar-refresh" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("sr-speedbar-refresh-turn-off" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("line" .
-   [1 0 0 0])
+((("global-linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("line-number-at-pos" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("global-linum-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("line" .
+   [1 0 0 0])
+  ("sr-speedbar-refresh-turn-off" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("speedbar-refresh" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("speedbar-shown-directories" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sr-speedbar-refresh-turn-on" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("sr-speedbar-auto-refresh" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
+  ("c-basic-offset" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("helm" .
+   [0 0 0 1])
+  ("sr-speedbar-open" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0])
+  ("nil" .
+   [3 0 0])
+  ("speedbar-use-images" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("speedbar-show-unknown-files" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("speedbar" .
+   [0 0 0 0 0 0 0 1])
+  ("setq" .
+   [13 0 0 0])
+  ("sr-speedbar-toggle" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("global-" .
+   [0 0 0 0 0 0 1])
+  ("sr-speedbar" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("require" .
+   [2 0 0 0 0 0 1])
+  ("sizeof" .
+   [0 0 0 1 0 0])
+  ("include" .
+   [0 0 0 0 1 1 0])
+  ("multiple-cursors" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])))
