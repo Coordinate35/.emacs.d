@@ -37,6 +37,10 @@
 (setq default-tab-width 4)
 (setq c-default-style "linux")
 (setq c-basic-offset 4)
+(global-linum-mode t)
+(setq linum-format "%d| ")
+(line-number-mode t)
+(column-number-mode t)
 
 ;; (require 'auto-complete)
 
@@ -78,11 +82,14 @@
 
 (require 'helm)
 (require 'sr-speedbar)
+(setq sr-speedbar-right-side nil)
+(sr-speedbar-open)
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
 (setq sr-speedbar-width 30)
-(setq sr-speedbar-right-side nil)
+(setq sr-speedbar-refresh-turn-on)
+(setq sr-speedbar-auto-refresh nil)
 
 (setq
  gdb-many-windows t
