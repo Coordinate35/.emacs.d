@@ -41,8 +41,16 @@
 (setq linum-format "%d| ")
 (line-number-mode t)
 (column-number-mode t)
+(electric-pair-mode t)
 
 ;; (require 'auto-complete)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+(global-set-key (kbd "C-c b") 'windmove-left)
+(global-set-key (kbd "C-c f") 'windmove-right)
+(global-set-key (kbd "C-c p") 'windmove-up)
+(global-set-key (kbd "C-c n") 'windmove-down)
 
 (require 'ggtags)
 
@@ -82,12 +90,12 @@
 
 (require 'helm)
 (require 'sr-speedbar)
+(setq sr-speedbar-width 30)
 (setq sr-speedbar-right-side nil)
 (sr-speedbar-open)
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
-(setq sr-speedbar-width 30)
 (setq sr-speedbar-refresh-turn-on)
 (setq sr-speedbar-auto-refresh nil)
 
@@ -101,3 +109,6 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; (require 'multi-term)
+;; (setq multi-term-program "/bin/zsh")
