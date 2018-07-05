@@ -96,7 +96,7 @@
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
-(setq sr-speedbar-refresh-turn-on)
+(sr-speedbar-refresh-turn-on)
 (setq sr-speedbar-auto-refresh nil)
 
 (setq
