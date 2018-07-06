@@ -1,7 +1,5 @@
 (require 'package)
 
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
@@ -114,19 +112,10 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH"))
-
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 (require 'go-autocomplete)
 (require 'auto-complete-config)
-; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
-; (require 'go-flymake)
-; (require 'go-flycheck)
-
-
 
 ;; (require 'multi-term)
 ;; (setq multi-term-program "/bin/zsh")
