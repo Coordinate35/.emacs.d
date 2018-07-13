@@ -124,9 +124,9 @@
 (require 'auto-complete-config)
 
 (add-to-list 'load-path "~/.emacs.d/manual-package/")
-(require 'go-test)
+(require 'gotests)
 
-                                        ; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
+; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
 ; (require 'go-flymake)
 ; (require 'go-flycheck)
 
