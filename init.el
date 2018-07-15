@@ -118,19 +118,17 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "GOPATH"))
 
-(autoload 'go-mode "go-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
-(require 'go-autocomplete)
-(require 'auto-complete-config)
+(if (eq major-mode 'go-mode)
+  (autoload 'go-mode "go-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+  (require 'go-autocomplete)
+  (require 'auto-complete-config)
 
-(add-to-list 'load-path "~/.emacs.d/manual-package/")
-(require 'gotests)
+  (add-to-list 'load-path "~/.emacs.d/manual-package/")
+  (require 'gotests)
 
-; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
-; (require 'go-flymake)
-; (require 'go-flycheck)
-
-
+  (add-hook 'before-save-hook 'gofmt-before-save)
+)
 
 ;; (require 'multi-term)
 ;; (setq multi-term-program "/bin/zsh")
