@@ -1,102 +1,170 @@
-((("go-mode" .
+((("last_pos" .
+   [2 0 0 0 0 0 0 0])
+  ("fullfilename" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("dst" .
+   [1 0 0])
+  ("tmp_dir" .
+   [1 0 0 0 1 0 0])
+  ("extract_dir" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("file_to_extract" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("__name__" .
+   [0 0 0 0 0 0 1 0])
+  ("Flask" .
+   [1 0 0 0 0])
+  ("gin" .
+   [3 0 0])
+  ("StatusOK" .
+   [0 0 0 0 0 0 0 1])
+  (":quick-object-witness-check" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("~/go" .
+   [0 0 0 1])
+  ("gotests" .
    [1 0 0 0 0 0 0])
-  ("eq" .
-   [1 0])
-  ("nums" .
-   [12 0 0 0])
-  ("size" .
+  ("load-path" .
+   [0 0 0 0 0 0 0 0 1])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("NGX_CONF_UNSET" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("qsort" .
+   [13 0 0 0 0])
+  ("temp" .
+   [6 0 0 0])
+  ("privot" .
+   [3 0 0 0 0 0])
+  ("return" .
+   [0 0 0 1 0 0])
+  ("using" .
+   [0 0 1 0 0])
+  ("namespace" .
+   [0 0 0 0 1 1 0 0 0])
+  ("make" .
    [1 0 0 0])
-  ("status" .
+  ("multi-term" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("path_segs" .
+   [1 0 0 0 0 0 0 0 0])
+  ("path_seg" .
+   [1 0 0 0 0 0 0 0])
+  ("r" .
+   [2])
+  ("multiple-cursors" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("include" .
+   [0 0 0 0 1 1 0])
+  ("sizeof" .
+   [0 0 0 1 0 0])
+  ("require" .
+   [3 0 0 0 0 0 2])
+  ("sr-speedbar" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("global-" .
+   [0 0 0 0 0 0 1])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("sr-speedbar-toggle" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [14 0 0 0])
+  ("speedbar" .
+   [0 0 0 0 0 0 0 1])
+  ("speedbar-show-unknown-files" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("speedbar-use-images" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("nil" .
+   [3 0 0])
+  ("sr-speedbar-open" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0])
+  ("helm" .
+   [0 0 0 1])
+  ("c-basic-offset" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("sr-speedbar-auto-refresh" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
+  ("sr-speedbar-refresh-turn-on" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("speedbar-shown-directories" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("speedbar-refresh" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("sr-speedbar-refresh-turn-off" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("line" .
+   [1 0 0 0])
+  ("line-number-at-pos" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("global-linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("addrs" .
+   [2 0 0 0 0])
+  ("ngx_int_t" .
+   [1 0 0 0 0 0 0 0 0])
+  ("shpool" .
    [1 0 0 0 0 0])
   ("mutex" .
    [1 0 0 0 0])
-  ("shpool" .
+  ("status" .
    [1 0 0 0 0 0])
-  ("ngx_int_t" .
-   [1 0 0 0 0 0 0 0 0])
-  ("addrs" .
-   [2 0 0 0 0])
-  ("global-linum-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("line-number-at-pos" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("line" .
+  ("size" .
    [1 0 0 0])
-  ("sr-speedbar-refresh-turn-off" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("speedbar-refresh" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("speedbar-shown-directories" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("sr-speedbar-refresh-turn-on" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("sr-speedbar-auto-refresh" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
-  ("c-basic-offset" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("helm" .
-   [0 0 0 1])
-  ("sr-speedbar-open" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0])
-  ("nil" .
-   [3 0 0])
-  ("speedbar-use-images" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("speedbar-show-unknown-files" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("speedbar" .
-   [0 0 0 0 0 0 0 1])
-  ("setq" .
-   [14 0 0 0])
-  ("sr-speedbar-toggle" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [1 0 0])
-  ("global-set-key" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("global-" .
-   [0 0 0 0 0 0 1])
-  ("sr-speedbar" .
-   [0 0 0 0 0 0 0 0 0 0 2])
-  ("require" .
-   [3 0 0 0 0 0 2])
-  ("sizeof" .
-   [0 0 0 1 0 0])
-  ("include" .
-   [0 0 0 0 1 1 0])
-  ("multiple-cursors" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("r" .
-   [2])
-  ("path_seg" .
-   [1 0 0 0 0 0 0 0])
-  ("path_segs" .
-   [1 0 0 0 0 0 0 0 0])
-  ("multi-term" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("make" .
-   [1 0 0 0])
-  ("namespace" .
-   [0 0 0 0 1 1 0 0 0])
-  ("using" .
-   [0 0 1 0 0])
-  ("return" .
-   [0 0 0 1 0 0])
-  ("privot" .
-   [3 0 0 0 0 0])
-  ("temp" .
-   [6 0 0 0])
-  ("qsort" .
-   [13 0 0 0 0])
-  ("NGX_CONF_UNSET" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("add-to-list" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("load-path" .
-   [0 0 0 0 0 0 0 0 1])
-  ("gotests" .
+  ("nums" .
+   [12 0 0 0])
+  ("eq" .
+   [1 0])
+  ("go-mode" .
    [1 0 0 0 0 0 0])
-  ("~/go" .
-   [0 0 0 1])
-  (":quick-object-witness-check" .
-   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("package" .
+   [0 0 0 0 1 0 0])
+  ("import" .
+   [0 0 0 0 1 0])
+  ("main" .
+   [1 0 0 0])
+  ("string" .
+   [1 0 0 0 0 0])
+  ("app" .
+   [3 0 0])
+  ("addr" .
+   [1 0 0 1])
+  ("ok" .
+   [2 0])
+  ("LookupEnv" .
+   [0 0 0 1 0 0 0 0 0])
+  ("goEnv" .
+   [1 0 0 0 0])
+  ("Default" .
+   [0 0 0 0 1 0 0])
+  ("in" .
+   [1 0])
+  ("MAX_CPUS" .
+   [1 0 0 0 0 0 0 0])
+  ("tarfile" .
+   [0 0 0 0 0 0 2])
+  ("file_names" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("file_name" .
+   [4 0 0 0 0 0 0 0 0])
+  ("Exception" .
+   [0 0 1 0 0 0 0 0 2])
+  ("extract" .
+   [3 0 0 0 0 0 0])
+  ("tar" .
+   [4 0 0])
+  ("getnames" .
+   [1 0 0 0 0 0 0 0])
+  ("root" .
+   [1 0 0 0])
+  ("fullpath" .
+   [2 0 0 0 0 0 0 0])
+  ("close" .
+   [1 0 0 0 0])
+  ("FORMATED_FILE_NAME" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("formated_filename" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])))

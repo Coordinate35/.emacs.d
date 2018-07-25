@@ -16,6 +16,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'molokai t)
 
 (global-set-key (kbd "M-SPC") 'set-mark-command)
 (global-set-key (kbd "M-s") 'ansi-term)
@@ -45,6 +47,15 @@
 (column-number-mode t)
 (electric-pair-mode t)
 
+(defun qiang-comment-dwim-line (&optional arg)
+  "Replacement for the comment-dwim command. If no region is selected and current line is not blank and we are not at the end of the line, then comment current line. Replaces default behaviour of comment-dwim, when it inserts comment at the end of the line."
+  (interactive "*P")
+  (comment-normalize-vars)
+  (if (and (not (region-active-p)) (not (looking-at "[ \t]*$")))
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    (comment-dwim arg)))
+
+
 (require 'auto-complete)
 
 (when (fboundp 'windmove-default-keybindings)
@@ -61,6 +72,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" default)))
  '(package-selected-packages
    (quote
     (exec-path-from-shell go-autocomplete go-playground go-errcheck company-go helm sr-speedbar company auto-complete ggtags))))
@@ -123,6 +137,7 @@
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
   (require 'go-autocomplete)
   (require 'auto-complete-config)
+  (ac-config-default)
 
   (add-to-list 'load-path "~/.emacs.d/manual-package/")
   (require 'gotests)
