@@ -77,7 +77,7 @@
     ("c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" default)))
  '(package-selected-packages
    (quote
-    (graphviz-dot-mode exec-path-from-shell go-autocomplete go-playground go-errcheck company-go helm sr-speedbar company auto-complete ggtags))))
+    (magit py-autopep8 elpy graphviz-dot-mode exec-path-from-shell go-autocomplete go-playground go-errcheck company-go helm sr-speedbar company auto-complete ggtags))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -144,6 +144,10 @@
 
   (add-hook 'before-save-hook 'gofmt-before-save)
 )
+
+(elpy-enable)
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; (require 'multi-term)
 ;; (setq multi-term-program "/bin/zsh")
