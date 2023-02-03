@@ -1,5 +1,11 @@
-# Emacs Config
+# Coordiante's Emacs Config
 
-## Prepare
+Support:
+* Golang IDE
 
-1. ctags, global is needed
+# Golang Dependency
+
+```shell
+go install golang.org/x/tools/gopls@latest
+go get -u github.com/nsf/gocode
+```
