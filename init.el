@@ -12,6 +12,15 @@
 
 (package-initialize)
 
+(require 'company)
+
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"
+        ))
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
 
 ;; golang support
 (custom-set-variables
@@ -34,5 +43,4 @@
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
 
-(require 'company)
 (require 'company-go)
