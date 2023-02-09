@@ -44,10 +44,13 @@
  )
 
 (add-hook 'go-mode-hook 'lsp-deferred)
+(add-hook 'go-mode-hook (lambda ()
+                                (setq tab-width 4)
+                                (require 'company-go)
+                                (add-hook 'before-save-hook 'lsp-format-buffer)
+                                (add-hook 'before-save-hook 'lsp-organize-imports)))
 
 ;; (add-to-list 'load-path "~/.emacs.d/manual-plugins/go-autocomplete")
 ;; (require 'go-autocomplete)
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-
-(require 'company-go)
