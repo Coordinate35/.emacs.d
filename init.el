@@ -19,6 +19,10 @@
 (window-numbering-mode)
 
 (require 'multiple-cursors)
+(global-set-key (kbd "C-c C-e") 'mc/edit-lines)
+(global-set-key (kbd "C-c C-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
 (require 'neotree)
 (setq-default neo-show-hidden-files t)
