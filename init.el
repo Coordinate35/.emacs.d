@@ -21,6 +21,7 @@
 (require 'multiple-cursors)
 
 (require 'neotree)
+(setq-default neo-show-hidden-files t)
 (global-set-key [f8] 'neotree-toggle)
 
 (require 'company)
