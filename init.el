@@ -15,6 +15,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'molokai t)
 
+(setq x-select-enable-clipboard t)
+
 (require 'window-numbering)
 (window-numbering-mode)
 

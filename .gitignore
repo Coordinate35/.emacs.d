@@ -1,3 +1,5 @@
 .lsp-session*
 *.elc
 eshell
+auto-save-list
+tramp
