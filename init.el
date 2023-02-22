@@ -31,6 +31,17 @@
 (setq-default neo-show-hidden-files t)
 (global-set-key [f8] 'neotree-toggle)
 
+(require 'rfc-mode)
+
+(require 'go-translate)
+(setq gts-translate-list '(("en" "zh")))
+
+(setq gts-default-translator
+      (gts-translator
+       :picker (gts-prompt-picker)
+       :engines (list (gts-bing-engine) (gts-google-engine))
+       :render (gts-buffer-render)))
+
 (require 'company)
 
 (require 'yasnippet)
@@ -48,7 +59,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(window-numbering multiple-cursors gotest molokai-theme neotree company-go company auto-complete lsp-mode go-mode)))
+   '(go-translate rfc-mode window-numbering multiple-cursors gotest molokai-theme neotree company-go company auto-complete lsp-mode go-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
