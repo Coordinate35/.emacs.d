@@ -16,6 +16,7 @@
 (load-theme 'molokai t)
 
 (setq x-select-enable-clipboard t)
+(column-number-mode 1)
 
 (require 'window-numbering)
 (window-numbering-mode)
