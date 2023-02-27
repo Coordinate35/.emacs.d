@@ -1,11 +1,11 @@
 (require 'package)
 
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
-       (proto (if no-ssl "http" "https")))
-  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
-  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos)) 
+		    (not (gnutls-available-p)))) 
+       (proto (if no-ssl "http" "https"))) 
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto
+							      "://stable.melpa.org/packages/")) t) 
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t) 
   (when (< emacs-major-version 24)
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
@@ -33,21 +33,20 @@
 
 (require 'rfc-mode)
 
+(require 'elisp-format)
+
 (require 'go-translate)
 (setq gts-translate-list '(("en" "zh")))
 
-(setq gts-default-translator
-      (gts-translator
-       :picker (gts-prompt-picker)
-       :engines (list (gts-bing-engine) (gts-google-engine))
-       :render (gts-buffer-render)))
+(setq gts-default-translator (gts-translator :picker (gts-prompt-picker) 
+					     :engines (list (gts-bing-engine) 
+							    (gts-google-engine)) 
+					     :render (gts-buffer-render)))
 
 (require 'company)
 
 (require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"
-        ))
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
@@ -58,8 +57,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(go-translate rfc-mode window-numbering multiple-cursors gotest molokai-theme neotree company-go company auto-complete lsp-mode go-mode)))
+ '(package-selected-packages '(elisp-format impatient-mode go-translate rfc-mode window-numbering
+					    multiple-cursors gotest molokai-theme neotree company-go
+					    company auto-complete lsp-mode go-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,13 +68,27 @@
  )
 
 (add-hook 'go-mode-hook 'lsp-deferred)
-(add-hook 'go-mode-hook (lambda ()
-                                (setq tab-width 4)
-                                (require 'company-go)
-                                (add-hook 'before-save-hook 'lsp-format-buffer)
-                                (add-hook 'before-save-hook 'lsp-organize-imports)))
+(add-hook 'go-mode-hook (lambda () 
+			  (setq tab-width 4) 
+			  (require 'company-go) 
+			  (add-hook 'before-save-hook 'lsp-format-buffer) 
+			  (add-hook 'before-save-hook 'lsp-organize-imports)))
 
 ;; (add-to-list 'load-path "~/.emacs.d/manual-plugins/go-autocomplete")
 ;; (require 'go-autocomplete)
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
+
+
+;; markdown support. Open http://localhost:8080/imp in brower like chrome to preview
+(defun markdown-html (buffer) 
+  (princ (with-current-buffer buffer (format
+				      "<!DOCTYPE html><html><title>Impatient Markdown</title><xmp theme=\"united\" style=\"display:none;\"> %s  </xmp><script src=\"http://ndossougbe.github.io/strapdown/dist/strapdown.js\"></script></html>" 
+				      (buffer-substring-no-properties 
+				       (point-min) 
+				       (point-max)))) 
+	 (current-buffer)))
+(add-hook 'markdown-mode-hook (lambda () 
+				(httpd-start) 
+				(impatient-mode 1) 
+				(imp-set-user-filter 'markdown-html)))
