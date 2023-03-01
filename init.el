@@ -51,7 +51,6 @@
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 
-;; golang support
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -67,6 +66,15 @@
  ;; If there is more than one, they won't work right.
  )
 
+
+;; c/c++ support
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c-mode-hook (lambda ()
+			 (setq tab-width 4)))
+(add-hook 'c++-mode-hook 'lsp)
+
+
+;; golang support
 (add-hook 'go-mode-hook 'lsp-deferred)
 (add-hook 'go-mode-hook (lambda () 
 			  (setq tab-width 4) 
