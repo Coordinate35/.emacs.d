@@ -33,6 +33,8 @@
 
 (require 'rfc-mode)
 
+(setq org-log-done 'time)
+
 (require 'elisp-format)
 
 (require 'go-translate)
