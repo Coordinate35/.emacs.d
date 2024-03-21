@@ -79,14 +79,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(clang-format dap-mode elisp-format impatient-mode go-translate rfc-mode window-numbering multiple-cursors gotest molokai-theme neotree company-go company auto-complete lsp-mode go-mode)))
+   '(go-gen-test thrift protobuf-mode clang-format dap-mode elisp-format impatient-mode go-translate rfc-mode window-numbering multiple-cursors gotest molokai-theme neotree company-go company auto-complete lsp-mode go-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
 
 ;; c/c++ support
 (add-hook 'c-mode-hook 'lsp)
@@ -102,7 +101,12 @@
 (add-hook 'go-mode-hook 'lsp-deferred)
 (add-hook 'go-mode-hook (lambda () 
 			  (setq tab-width 4) 
-			  (require 'company-go) 
+			  (require 'company-go)
+			  (setq dap-auto-configure-features '(sessions locals controls tooltip))
+			  (require 'dap-dlv-go)
+			  (global-set-key (kbd "C-c C-g") #'lsp-find-definition)
+			  (global-set-key (kbd "C-c C-i") #'lsp-find-implementation)
+			  (global-set-key (kbd "C-c C-r") #'lsp-find-references)
 			  (add-hook 'before-save-hook 'lsp-format-buffer) 
 			  (add-hook 'before-save-hook 'lsp-organize-imports)))
 
@@ -110,7 +114,6 @@
 ;; (require 'go-autocomplete)
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-
 
 ;; markdown support. Open http://localhost:8080/imp in brower like chrome to preview
 (defun markdown-html (buffer) 
@@ -124,3 +127,13 @@
 				(httpd-start) 
 				(impatient-mode 1) 
 				(imp-set-user-filter 'markdown-html)))
+
+
+;; protobuf support
+(require 'protobuf-mode)
+(defconst my-protobuf-style
+  '((c-basic-offset . 4)
+    (indent-tabs-mode . nil)))
+
+(add-hook 'protobuf-mode-hook
+  (lambda () (c-add-style "my-style" my-protobuf-style t)))
