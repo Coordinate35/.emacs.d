@@ -8,6 +8,7 @@ Support:
 ```shell
 go install golang.org/x/tools/gopls@latest
 go get -u github.com/nsf/gocode
+go install github.com/cweill/gotests/...@latest
 ```
 
 Need to add gopls to $PATH. Exampe: 
