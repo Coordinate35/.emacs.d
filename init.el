@@ -109,7 +109,22 @@
 			  (global-set-key (kbd "C-c C-i") #'lsp-find-implementation)
 			  (global-set-key (kbd "C-c C-r") #'lsp-find-references)
 			  (add-hook 'before-save-hook 'lsp-format-buffer) 
-			  (add-hook 'before-save-hook 'lsp-organize-imports)))
+			  (add-hook 'before-save-hook 'lsp-organize-imports))
+			  (global-set-key (kbd "C-c d") #'dap-debug)
+              (global-set-key (kbd "C-c b") #'dap-breakpoint-toggle)
+              (global-set-key (kbd "C-c c") #'dap-continue)
+              (global-set-key (kbd "C-c s i") #'dap-step-in)
+              (global-set-key (kbd "C-c s o") #'dap-stop-out)
+              (global-set-key (kbd "C-c n") #'dap-next)
+              (global-set-key (kbd "C-c v") #'dap-ui-locals)
+              (dap-register-debug-template "f"
+            			(list :type "go"
+                        	:request "launch"
+                            :name "Test function"
+                            :mode "test"
+                            :program nil
+                            :args nil
+                            :env nil)))
 
 ;; (add-to-list 'load-path "~/.emacs.d/manual-plugins/go-autocomplete")
 ;; (require 'go-autocomplete)
