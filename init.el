@@ -117,6 +117,7 @@
               (global-set-key (kbd "C-c s o") #'dap-stop-out)
               (global-set-key (kbd "C-c n") #'dap-next)
               (global-set-key (kbd "C-c v") #'dap-ui-locals)
+		      (global-set-key (kbd "C-c r") #'go-run)
               (dap-register-debug-template "f"
             			(list :type "go"
                         	:request "launch"
