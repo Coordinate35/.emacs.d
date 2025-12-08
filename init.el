@@ -15,6 +15,11 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'molokai t)
 
+(when (eq window-system 'w32)
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-face-attribute 'default nil :family "Cascadia Code" :height 90 :weight 'semibold))
+)
+
 (setq x-select-enable-clipboard t)
 (column-number-mode 1)
 
